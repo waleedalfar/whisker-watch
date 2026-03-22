@@ -644,7 +644,7 @@ export default function App() {
     const form = new FormData();
     form.append("file", file);
     try {
-      const res  = await fetch("https://whisker-watch-production.up.railway.app/", { method: "POST", body: form });
+      const res  = await fetch("https://whisker-watch-production.up.railway.app/hackathon", { method: "POST", body: form });
       const data = await res.json();
       if (!res.ok) throw new Error(data.detail || "Request failed");
       const r   = data.owner_response;
